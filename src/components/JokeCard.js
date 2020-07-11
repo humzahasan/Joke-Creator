@@ -15,7 +15,7 @@ function JokeCard(props) {
         <h5 className='card-header'>Joke</h5>
         <div className='card-body'>
           <h4 className='card-text'>
-            {props.jokes}
+           Props -> {props.loading}
           </h4>
           <br />
           <a href='/' className='btn btn-primary'>

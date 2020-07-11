@@ -29,7 +29,6 @@ function App() {
       })
       
     const data = res.data.content
-    //console.log(data)
     setJoke(data)
     setLoading(false)
   }  
