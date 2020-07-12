@@ -19,9 +19,9 @@ const JokeCard = ({loading, jokes, click}) => {
             <div className='card-body'>
               <h4 className='card-text'>{JSON.stringify(jokes)}</h4>
               <br />
-              <a onClick={click} className='btn btn-primary'>
+              <button onClick={click} className='btn btn-primary'>
                 Laugh a little More.
-              </a>
+              </button>
             </div>
           </div>
         </div>

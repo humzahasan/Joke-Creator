@@ -11,7 +11,9 @@ function App() {
   const [loading, setLoading] = useState(false);
   
   useEffect(() => {
+    
     getJoke();
+    // eslint-disable-next-line
   }, []);
   
   const API_KEY = process.env.REACT_APP_API_KEY
