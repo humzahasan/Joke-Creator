@@ -1,30 +1,36 @@
 import React from 'react';
-
-function JokeCard(props) {
- 
-  console.log(props)
+import loadinggif from '../loading.gif'
+const JokeCard = ({loading, jokes, click}) => {
+  console.log(loading);
+  console.log(typeof jokes);
   
-  if(props.loading) {
-    return <h4>Loading....</h4>
-  }
-
-
-  return (
-    <div className='mt-5'>
-      <div className='card'>
-        <h5 className='card-header'>Joke</h5>
-        <div className='card-body'>
-          <h4 className='card-text'>
-           Props -> {props.loading}
-          </h4>
-          <br />
-          <a href='/' className='btn btn-primary'>
-            Laugh a little More.
-          </a>
+  if (loading) {
+    return (
+      <div className="card" style={{border : "none"}}>
+        <img src={loadinggif} alt="loading"/>
+      </div>
+    )
+  } else {
+    return (
+      <div>
+        <div className='mt-5'>
+          <div className='card'>
+            <h5 className='card-header'>Joke</h5>
+            <div className='card-body'>
+              <h4 className='card-text'>{JSON.stringify(jokes)}</h4>
+              <br />
+              <a onClick={click} className='btn btn-primary'>
+                Laugh a little More.
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
+};
 
 export default JokeCard;
+
+//
+//{ jokes.map((item, index) => (<p key={index}>{item}</p>)) }

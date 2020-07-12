@@ -7,7 +7,7 @@ function Footer() {
 
  
   <div className="footer-copyright text-center py-3">© 2020 Copyright <br />
-    <a href="https://mdbootstrap.com/">Made With Love and React</a>
+  Made With Love and React 
   </div>
  
 </footer>
